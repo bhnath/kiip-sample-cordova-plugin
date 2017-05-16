@@ -1,0 +1,11 @@
+{
+  "name": "cordova-sample-plugin-kiip",
+  "version": "1.0.0",
+  "cordova": {
+    "id": "cordova-sample-plugin-kiip",
+    "platforms": [
+      "android"
+    ]
+  },
+  "description": "Cordova plugin to wrap Kiip Sample Library"
+}

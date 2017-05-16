@@ -1,2 +1,1 @@
-# kiip-sample-cordova-plugin
-Sample Apache Cordova wrapper for Android Library plugins
+Sample Cordova plugin wrapper for the KiipSampleLibrary.

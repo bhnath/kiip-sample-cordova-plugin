@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin xmlns:android="http://schemas.android.com/apk/res/android" id="KiipSampleCordovaPlugin"
+    version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+    <name>HNCP</name>
+    <js-module name="HackerNews" src="www/KiipSampleCordovaPlugin.js">
+        <clobbers target="com.bhnath.kiip.cordova.KiipSampleCordovaPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file parent="/*" target="res/xml/config.xml">
+            <feature name="KiipSampleCordovaPlugin">
+                <param name="android-package" value="com.bhnath.kiip.cordova.KiipSampleCordovaPlugin" />
+            </feature>
+        </config-file>
+        <config-file parent="/*" target="AndroidManifest.xml">
+            <uses-permission android:name="android.permission.INTERNET"/>
+            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+        </config-file>
+        <source-file src="src/android/KiipSampleCordovaPlugin.java" target-dir="src/com/bhnath/kiip/cordova/KiipSampleCordovaPlugin" />
+        <framework src="src/android/plugin.gradle" custom="true" type="gradleReference" />
+        <resource-file src="aar/kiipsamplelibrary.aar" target="aar/kiipsamplelibrary.aar" />
+    </platform>
+</plugin>
